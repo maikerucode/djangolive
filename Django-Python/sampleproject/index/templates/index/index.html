@@ -1,0 +1,7 @@
+{% extends "index/template.html" %}
+
+{% block body %}
+        <p>Your name is {{ name }}</p>
+        <p>Pleased to meet you!</p>
+{% endblock %}
+<a href="{% url 'index/timeDisplay' %}">time check(?)</a>

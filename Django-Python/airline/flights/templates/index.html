@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Flights</h1>
+<!-- <ul>
+    {% for flight in flights %}
+    <li><a href="{% url 'flight' flight.id %}">{{flight}}</a></li>
+    {% endfor %}
+</ul> -->
+
+<table border="2">
+    <tr>
+        <th>Flights</th>
+    </tr>
+    {% for flight in flights %}
+    <tr>
+        <td style="padding:10px;"><a href="{% url 'flight' flight.id %}">{{flight}}</a></td>
+        <td>
+            <form action="">
+                <input type="submit" value="Edit">
+            </form>
+        </td>
+        <td>
+            <form action="">
+                <input type="submit" value="Delete">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="{% url 'flights_form' %}">Add Flights</a>
+<br>
+<a href="{% url 'passenger_form' %}">Add New Passengers</a>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "index/template.html" %}
+
+{% block body %}
+    <ul>
+        {% for man in men %}
+            <li>{{ man }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
